@@ -10,6 +10,9 @@ module "kfh" {
   http_buffering_size     = var.http_buffering_size
   http_buffering_interval = var.http_buffering_interval
 
+  enable_lambda_transform = var.enable_lambda_transform
+  lambda_transform_arn    = var.lambda_transform_arn
+
   s3_failure_bucket_arn = var.s3_failure_bucket_arn
   s3_backup_mode        = var.s3_backup_mode
   s3_buffer_size        = var.s3_buffer_size

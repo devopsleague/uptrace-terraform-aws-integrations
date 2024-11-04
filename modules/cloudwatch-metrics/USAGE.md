@@ -34,6 +34,8 @@
 |------|-------------|------|---------|:--------:|
 | <a name="input_http_buffering_interval"></a> [http\_buffering\_interval](#input\_http\_buffering\_interval) | Kinesis Firehose http buffer interval, in seconds. | `number` | `60` | no |
 | <a name="input_http_buffering_size"></a> [http\_buffering\_size](#input\_http\_buffering\_size) | Kinesis Firehose http buffer size, in MiB. | `number` | `15` | no |
+| <a name="input_enable_lambda_transform"></a> [enable\_lambda\_transform](#input\_enable\_lambda\_transform) | Enable a Lambda transform on the Kinesis Firehose to preprocess and structure the metrics | `bool` | `false` | no |
+| <a name="input_lambda_transform_arn"></a> [lambda\_transform\_arn](#input\_lambda\_transform\_arn) | If enable\_lambda\_transform is set to true, specify a valid arn | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | A unique name for this CloudWatch Metric Stream. | `string` | `"uptrace-cloudwatch-metrics"` | no |
 | <a name="input_namespace_exclude_filters"></a> [namespace\_exclude\_filters](#input\_namespace\_exclude\_filters) | An optional list of CloudWatch Metric namespaces to exclude. If set, we'll only stream metrics that are not in these namespaces. Mutually exclusive with `namespace_include_filters`. | `list(string)` | `[]` | no |
 | <a name="input_namespace_include_filters"></a> [namespace\_include\_filters](#input\_namespace\_include\_filters) | An optional list of CloudWatch Metric namespaces to include. If set, we'll only stream metrics from these namespaces. Mutually exclusive with `namespace_exclude_filters`. | `list(string)` | `[]` | no |
